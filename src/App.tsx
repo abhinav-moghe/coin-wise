@@ -1,7 +1,12 @@
 import './App.css'
+import { RebootCSS } from './global-styles'
 
 const App = () => {
-  return (<></>)
+  return (
+    <>
+      <RebootCSS></RebootCSS>
+    </>
+  )
 }
 
 export default App
