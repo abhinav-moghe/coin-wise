@@ -7,13 +7,17 @@ export const TransactionList = () => {
   const [transactions, setTransactions] = useState<Array<ITransaction>>([])
 
   useEffect(() => {
-    setTransactions(DTransactions)
+    if (DTransactions?.length > 0) {
+      setTransactions(DTransactions)
+    }
   }, [])
 
   return (
-    transactions?.length > 0 &&
-    <TransactionListContainer>
-      {transactions.map((t) => <Transaction key={t.id} transaction={t}></Transaction>)}
-    </TransactionListContainer>
+    transactions.length > 0 &&
+    (
+      <TransactionListContainer>
+        {transactions.map((t) => <Transaction key={t.id} transaction={t}></Transaction>)}
+      </TransactionListContainer>
+    )
   )
 }

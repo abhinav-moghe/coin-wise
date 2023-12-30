@@ -5,11 +5,10 @@ import { ContainerHeader, LeftContainer, TransactionContainer, ViewContainer } f
 const App = () => {
   return (
     <>
-      <RebootCSS></RebootCSS>
+      <RebootCSS />
       <ViewContainer>
         <LeftContainer>
-          {/* account */}
-          {/* categories */}
+          {/* Placeholder for account and category components */}
         </LeftContainer>
         <TransactionContainer>
           <ContainerHeader>Recent Transaction(s)</ContainerHeader>

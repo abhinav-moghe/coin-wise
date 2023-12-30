@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+const TextSpan = styled.div`
+    line-height: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--primary-txt);
+`
+
 export const TransactionContainer = styled.div`
     width: 100%;
     height: 4rem;
@@ -34,13 +41,6 @@ export const CategoryImg = styled.img`
 export const CategoryNameAndDate = styled.div`
     display: flex;
     flex-direction: column;
-`
-
-const TextSpan = styled.div`
-    line-height: 1.25rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--primary-txt);
 `
 
 export const CategoryName = styled(TextSpan)``

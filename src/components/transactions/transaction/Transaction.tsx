@@ -8,29 +8,33 @@ export const Transaction = ({ transaction }: { transaction: ITransaction }) => {
   const [account, setAccount] = useState<IAccount | undefined>(undefined)
 
   useEffect(() => {
-    setCategory(() =>
-      DCategories
-        .find((c: ICategory) => c.id === transaction?.categoryId)
-    )
+    const foundCategory: ICategory | undefined = DCategories
+      .find((c: ICategory) => c.id === transaction?.categoryId)
+    const foundAccount: IAccount | undefined = DAccounts
+      .find((a: IAccount) => a.id === transaction?.accountId)
 
-    setAccount(() =>
-      DAccounts
-        .find((a: IAccount) => a.id === transaction?.accountId)
-    )
+    setCategory(foundCategory)
+    setAccount(foundAccount)
 
   }, [transaction])
 
+  if (!transaction) {
+    return null
+  }
+
   return (
     transaction &&
-    <TransactionContainer>
-      <CategoryIconCircle>
-        <CategoryImg src={`src/assets/images/${category?.imageURL}`} />
-      </CategoryIconCircle>
-      <CategoryNameAndDate>
-        <CategoryName>{category?.name} - {transaction.notes}</CategoryName>
-        <Date>{transaction.date} • From {account?.name}</Date>
-      </CategoryNameAndDate>
-      <Amount>{transaction.type === 'withdraw' ? '-' : '+'}₹1,000</Amount>
-    </TransactionContainer>
+    (
+      <TransactionContainer>
+        <CategoryIconCircle>
+          <CategoryImg src={`src/assets/images/${category?.imageURL}`} />
+        </CategoryIconCircle>
+        <CategoryNameAndDate>
+          <CategoryName>{category?.name} - {transaction.notes}</CategoryName>
+          <Date>{transaction.date} • From {account?.name}</Date>
+        </CategoryNameAndDate>
+        <Amount>{transaction.type === 'withdraw' ? '-' : '+'}₹1,000</Amount>
+      </TransactionContainer>
+    )
   )
 }
