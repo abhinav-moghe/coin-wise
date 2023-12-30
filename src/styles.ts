@@ -33,10 +33,12 @@ export const ContainerHeader = styled.header`
   font-weight: 600;
   font-size: 0.875rem;
   color: var(--primary-txt);
+  border-bottom: 1px solid var(--color-default-border);
 `;
 
 export const Content = styled.div`
-  padding: 1rem;
+  width: 100%;
   height: calc(100% - (1rem + 1.25rem + 1rem));
-  color: var(--primary-txt);
+  padding-right: 1rem;
+  padding-left: 1rem;
 `;

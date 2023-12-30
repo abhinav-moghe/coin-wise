@@ -1,5 +1,6 @@
+import { TransactionList } from './components/transactions/transactionList/TransactionList'
 import { RebootCSS } from './global-styles'
-import { ContainerHeader, Content, LeftContainer, TransactionContainer, ViewContainer } from './styles'
+import { ContainerHeader, LeftContainer, TransactionContainer, ViewContainer } from './styles'
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
         </LeftContainer>
         <TransactionContainer>
           <ContainerHeader>Recent Transaction(s)</ContainerHeader>
-          <Content>Hello !</Content>
+          <TransactionList></TransactionList>
         </TransactionContainer>
       </ViewContainer>
     </>
