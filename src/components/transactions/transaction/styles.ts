@@ -1,11 +1,5 @@
 import styled from "styled-components";
-
-const TextSpan = styled.div`
-    line-height: 1.25rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--primary-txt);
-`
+import { TextSpan } from "../../../styles";
 
 export const TransactionContainer = styled.div`
     width: 100%;
