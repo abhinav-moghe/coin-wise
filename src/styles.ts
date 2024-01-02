@@ -22,6 +22,7 @@ export const Button = styled.button`
   border: 1px solid var(--color-default-border);
 
   cursor: pointer;
+  transition: border-color 0.15s linear;
 
   &:hover {
     border-color: var(--color-default-hover);
