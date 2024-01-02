@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TextSpan } from "../../../styles";
+import { BaseSpanStyles } from "../../../styles";
 
 export const TransactionContainer = styled.div`
     width: 100%;
@@ -37,13 +37,19 @@ export const CategoryNameAndDate = styled.div`
     flex-direction: column;
 `
 
-export const CategoryName = styled(TextSpan)``
+export const CategoryName = styled.span`
+    ${BaseSpanStyles};
+`
 
-export const Date = styled(TextSpan)`
+export const Date = styled.span`
+    ${BaseSpanStyles};
+    
     font-weight: 400;
     font-size: 0.750rem;
 `
 
-export const Amount = styled(TextSpan)`
+export const Amount = styled.span`
+    ${BaseSpanStyles};
+    
     margin-left: auto;
 `

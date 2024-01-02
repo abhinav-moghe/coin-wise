@@ -1,18 +1,25 @@
 import { styled } from "styled-components";
 
-export const TextSpan = styled.span`
+export const BaseSpanStyles = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--primary-txt);
 `
 
-export const Button = styled.button`
+export const BaseButtonStyles = `
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 0.25rem;
+
+  cursor: pointer;
+  transition: border-color 0.15s linear;
+`
+
+export const Button = styled.button`
+  ${BaseButtonStyles};
 
   padding-right: 0.50rem;
   padding-left: 0.50rem;
@@ -21,14 +28,12 @@ export const Button = styled.button`
   border-radius: 0.25rem;
   border: 1px solid var(--color-default-border);
 
-  cursor: pointer;
-  transition: border-color 0.15s linear;
-
   &:hover {
     border-color: var(--color-default-hover);
   }
 
   &:active {
+    /* TO-DO: Separate this out */
     background-color: hsla(212, 12%, 18%, 1);
     border-color: #6E7681;
   }
@@ -74,7 +79,8 @@ export const ContainerHeader = styled.header`
   border-bottom: 1px solid var(--color-default-border);
 `
 
-export const HeaderText = styled(TextSpan)`
+export const HeaderText = styled.span`
+  ${BaseSpanStyles};
   font-weight: 600;
 `
 
@@ -89,4 +95,8 @@ export const Content = styled.div`
   height: calc(100% - (1rem + 1.25rem + 1rem));
   padding-right: 1rem;
   padding-left: 1rem;
+`
+
+export const ButtonText = styled.span`
+  ${BaseSpanStyles};
 `

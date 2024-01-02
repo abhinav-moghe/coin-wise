@@ -1,6 +1,6 @@
 import { TransactionList } from './components/transactions/transactionList/TransactionList'
 import { RebootCSS } from './global-styles'
-import { Button, ButtonIcon, ContainerHeader, HeaderActions, HeaderText, LeftContainer, TextSpan, TransactionContainer, ViewContainer } from './styles'
+import { Button, ButtonIcon, ButtonText, ContainerHeader, HeaderActions, HeaderText, LeftContainer, TransactionContainer, ViewContainer } from './styles'
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
             </HeaderText>
             <HeaderActions>
               <Button>
-                <TextSpan>Add</TextSpan>
+                <ButtonText>Add</ButtonText>
                 <ButtonIcon src='src/assets/icons/add.png' />
               </Button>
             </HeaderActions>
