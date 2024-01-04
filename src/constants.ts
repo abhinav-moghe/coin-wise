@@ -3,31 +3,19 @@ export const DAccounts: Array<IAccount> = [
     id: 1,
     name: 'HDFC Bank',
     type: 'savings',
+    imageURL: 'icon-hdfc.png',
   },
   {
     id: 2,
     name: 'State Bank of India',
     type: 'savings',
+    imageURL: 'icon-sbi.png',
   },
   {
     id: 3,
     name: 'PayTM Bank',
     type: 'savings',
-  },
-  {
-    id: 4,
-    name: 'Flipkart Axis Bank Credit Card',
-    type: 'credit',
-  },
-  {
-    id: 5,
-    name: 'Amazon ICICI Credit Card',
-    type: 'credit',
-  },
-  {
-    id: 6,
-    name: 'OneCard',
-    type: 'credit',
+    imageURL: 'icon-paytm.png',
   },
 ]
 
@@ -86,7 +74,7 @@ export const DTransactions: Array<ITransaction> = [
     id: 4,
     date: '04 December, 2023',
     type: 'withdraw',
-    accountId: 4,
+    accountId: 1,
     amount: 4000,
     notes: 'Transaction Four',
     categoryId: 4,
@@ -95,9 +83,22 @@ export const DTransactions: Array<ITransaction> = [
     id: 5,
     date: '05 December, 2023',
     type: 'withdraw',
-    accountId: 5,
+    accountId: 2,
     amount: 1000,
     notes: 'Transaction Five',
     categoryId: 3,
   }
+]
+
+export const DTransactionTypes: Array<ITransactionType> = [
+  {
+    id: 1,
+    name: 'Deposit',
+    imageURL: 'icon-deposit.png'
+  },
+  {
+    id: 2,
+    name: 'Withdraw',
+    imageURL: 'icon-withdraw.png'
+  },
 ]

@@ -40,36 +40,37 @@ export const RebootCSS = createGlobalStyle`
     font-family: var(--font-family);
   }
 
+  input {
+    font-family: var(--font-family);
+  }
+
   /* Color Variables */
   :root {
+    --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
     --primary-bg-color: #010409;
     --secondary-bg-color: #0D1117;
-    --btn-primary-bg-color: #21262D;
     --primary-txt: #E6EDF3;
     --secondary-txt: #7D8590;
-    --tint-purple: #E6EDF3;
-    --tint-blue: #3178C6;
-    --tint-green: #238636;
     --color-default-border: #3C4043;
     --color-default-focus: #619159;
     --color-default-hover: #8B949E;
     --drop-down-bg-color: #161B22;
-    --maroon: #69090B;
-    --bright-green: #6ae773;
-    --bright-green-2: #12f287;
-    --lime-ish: #cdef64;
-    --blue-ish: #88d8b4;
-    --some-color: #E4cf98;
-    --washed-blue: #003366;
-    --primary-button-color: #619159;
-    --color-action-button-hover: #2EA043;
+    --color-gray: #30363D;
+    --color-neutral-muted: #6E768199;
+    --color-overlay-shadow: 0 0 0 1px #30363D, 0 16px 32px #010409D9;
 
-    --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* PRIMARY BUTTON */
+    --color-button-primary-background: #238636;
+    --color-button-primary-hover-background: #2EA043;
+    --color-button-primary-text: #FFFFFF;
+    --color-button-primary-border: #F0F6FC1A;
 
-    /* --primary-focus-color: #2F81F7; */
-    /* --default-border-color: #30363D; */
-    /* --default-focus-color: #619159; */
-    /* --color-btn-drop-down-focus: #619159; */
-    /* --color-btn-drop-down-hover: #8B949E; */
+    /* SECONDARY BUTTON */
+    --color-button-secondary-background: #21262D;
+    --color-button-secondary-hover-background: #30363D;
+    --color-button-secondary-text: #C9D1D9;
+    --color-button-secondary-border: #F0F6FC1A;
+    --color-button-secondary-hover-border: #8B949E;
   }
 `

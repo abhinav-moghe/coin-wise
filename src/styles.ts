@@ -16,51 +16,72 @@ export const BaseButtonStyles = `
 
   cursor: pointer;
   transition: border-color 0.15s linear;
+  border-radius: 0.375rem;
+`
+
+export const BaseImageStyles = styled.img`
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
+`
+
+export const BaseHeaderStyles = styled.header`
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const BaseHeaderText = styled.span`
+  ${BaseSpanStyles};
+  font-weight: 600;
+`
+
+export const BaseHeaderActions = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 `
 
 export const Button = styled.button`
   ${BaseButtonStyles};
 
-  padding-right: 0.50rem;
-  padding-left: 0.50rem;
-
-  background-color: var(--secondary-bg-color);
-  border-radius: 0.25rem;
-  border: 1px solid var(--color-default-border);
+  padding: 0.125rem 0.50rem;
+  
+  background-color: var(--color-button-secondary-background);
+  border: 1px solid var(--color-button-secondary-border); 
 
   &:hover {
-    border-color: var(--color-default-hover);
+    background-color: var(--color-button-secondary-hover-background);
+    border-color: var(--color-button-secondary-hover-border);
   }
 
   &:active {
-    /* TO-DO: Separate this out */
-    background-color: hsla(212, 12%, 18%, 1);
-    border-color: #6E7681;
+    background-color: var(--color-button-secondary-background);
+    border-color: var(--color-button-secondary-hover-border);
   }
 `
 
-export const ButtonIcon = styled.img`
-  width: 1rem;
-  height: 1rem;
-`
-
 export const ViewContainer = styled.main`
-  box-sizing: border-box;
   width: 100%;
   height: 100%;
+
   display: flex;
   flex-direction: row;
   gap: 1rem;
   padding: 1rem;
+  
   background-color: var(--primary-bg-color);
 `
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
+  
   background-color: var(--secondary-bg-color);
   border: 1px solid var(--color-default-border);
-  border-radius: 0.25rem;
+  border-radius: 0.375rem;
 `
 
 export const LeftContainer = styled(Container)`
@@ -71,32 +92,17 @@ export const TransactionContainer = styled(Container)`
   width: 75%;
 `
 
-export const ContainerHeader = styled.header`
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+export const ContainerHeader = styled(BaseHeaderStyles)`
   border-bottom: 1px solid var(--color-default-border);
-`
-
-export const HeaderText = styled.span`
-  ${BaseSpanStyles};
-  font-weight: 600;
-`
-
-export const HeaderActions = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
 `
 
 export const Content = styled.div`
   width: 100%;
   height: calc(100% - (1rem + 1.25rem + 1rem));
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 0 1rem;
 `
 
 export const ButtonText = styled.span`
   ${BaseSpanStyles};
+  color: var(--color-button-secondary-text);
 `

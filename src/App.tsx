@@ -1,8 +1,13 @@
+import { useState } from 'react'
+import AddTransaction from './components/transactions/newTransaction/AddTransaction'
 import { TransactionList } from './components/transactions/transactionList/TransactionList'
 import { RebootCSS } from './global-styles'
-import { Button, ButtonIcon, ButtonText, ContainerHeader, HeaderActions, HeaderText, LeftContainer, TransactionContainer, ViewContainer } from './styles'
+import { BaseHeaderActions, BaseHeaderText, BaseImageStyles, Button, ButtonText, ContainerHeader, LeftContainer, TransactionContainer, ViewContainer } from './styles'
+import Overlay from './components/ui/Overlay/Overlay'
 
 const App = () => {
+  const [showAddTransaction, setShowAddTransaction] = useState<boolean>(false)
+
   return (
     <>
       <RebootCSS />
@@ -12,15 +17,21 @@ const App = () => {
         </LeftContainer>
         <TransactionContainer>
           <ContainerHeader>
-            <HeaderText>
+            <BaseHeaderText>
               Recent Transaction(s)
-            </HeaderText>
-            <HeaderActions>
-              <Button>
+            </BaseHeaderText>
+            <BaseHeaderActions>
+              <Button onClick={() => setShowAddTransaction(true)}>
                 <ButtonText>Add</ButtonText>
-                <ButtonIcon src='src/assets/icons/add.png' />
+                <BaseImageStyles {...{ width: '16px', height: '16px' }} src='src/assets/icons/add.png' />
               </Button>
-            </HeaderActions>
+              {
+                showAddTransaction &&
+                <Overlay>
+                  <AddTransaction open={true} onClose={() => setShowAddTransaction(false)} />
+                </Overlay>
+              }
+            </BaseHeaderActions>
           </ContainerHeader>
           <TransactionList></TransactionList>
         </TransactionContainer>
