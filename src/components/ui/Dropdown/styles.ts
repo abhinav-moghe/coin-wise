@@ -1,15 +1,16 @@
 import styled from "styled-components"
-import { BaseButtonStyles, BaseSpanStyles } from "../../../styles"
+import { BaseButton, BaseSpan } from "../../../base-styles"
 
-export const DropdownButton = styled.button`
-  ${BaseButtonStyles};
+export const DropdownButton = styled.button<{ width: string; height: string }>`
+  ${BaseButton}
   width: 100%;
   height: 2.5rem;
-  padding-right: 0 0.5rem 0;
+  padding: 0 0.5rem 0;
+
+  justify-content: space-between;
 
   color: var(--secondary-txt);
   background-color: var(--primary-bg-color);
-  border-radius: 0.375rem;
   border: 1px solid var(--color-default-border);
 
   &:hover {
@@ -23,15 +24,15 @@ export const DropdownButton = styled.button`
 `
 
 export const DropdownLabel = styled.span`
-  ${BaseSpanStyles};
+  ${BaseSpan}
   font-weight: 400;
   color: var(--secondary-txt);
 `
 
 export const DropdownButtonContent = styled.a`
   width: 100%;
-  padding: 0.375rem 0.50rem;
-  
+  padding: 0.375rem 0.5rem;
+
   position: relative;
   display: flex;
   flex-direction: row;
@@ -40,9 +41,8 @@ export const DropdownButtonContent = styled.a`
 `
 
 export const DropdownSelectedText = styled.span`
-  ${BaseSpanStyles};
+  ${BaseSpan}
   font-weight: 400;
-  color: var(--primary-txt);
 `
 
 export const DropdownOptionsWrapper = styled.ul`
@@ -52,8 +52,8 @@ export const DropdownOptionsWrapper = styled.ul`
   padding: 0.5rem;
 
   position: absolute;
-  
-  background-color: var(--drop-down-bg-color);  
+
+  background-color: var(--drop-down-bg-color);
   border-radius: 0.375rem;
   list-style: none;
   z-index: 10;
@@ -71,7 +71,7 @@ export const DropdownOption = styled.li`
 export const DropdownOptionContent = styled.a`
   width: 100%;
   height: 2.5rem;
-  padding: 0.375rem 0.50rem;
+  padding: 0.375rem 0.5rem;
 
   position: relative;
   display: flex;
@@ -82,11 +82,11 @@ export const DropdownOptionContent = styled.a`
   border-style: none;
 
   &:hover {
-    background-color: #B1BAC41F;
+    background-color: #b1bac41f;
   }
 `
 
 export const DropdownOptionLabel = styled.span`
-  ${BaseSpanStyles};
+  ${BaseSpan}
   font-weight: 400;
 `

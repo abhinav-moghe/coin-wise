@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components"
 
-export const RebootCSS = createGlobalStyle`
+export const RebootCSS = createGlobalStyle`${css`
   html {
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
@@ -44,33 +44,51 @@ export const RebootCSS = createGlobalStyle`
     font-family: var(--font-family);
   }
 
+  /* scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #171717;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #959595;
+    border-radius: 6px;
+  }
+`}`
+
+export const Theme = createGlobalStyle`${css`
   /* Color Variables */
   :root {
-    --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    
+    --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+
     --primary-bg-color: #010409;
-    --secondary-bg-color: #0D1117;
-    --primary-txt: #E6EDF3;
-    --secondary-txt: #7D8590;
-    --color-default-border: #3C4043;
+    --secondary-bg-color: #0d1117;
+    --primary-txt: #e6edf3;
+    --secondary-txt: #7d8590;
+    --color-default-border: #3c4043;
     --color-default-focus: #619159;
-    --color-default-hover: #8B949E;
-    --drop-down-bg-color: #161B22;
-    --color-gray: #30363D;
-    --color-neutral-muted: #6E768199;
-    --color-overlay-shadow: 0 0 0 1px #30363D, 0 16px 32px #010409D9;
+    --color-default-hover: #8b949e;
+    --drop-down-bg-color: #161b22;
+    --color-gray: #30363d;
+    --color-neutral-muted: #6e768199;
+    --color-overlay-shadow: 0 0 0 1px #30363d, 0 16px 32px #010409d9;
 
     /* PRIMARY BUTTON */
     --color-button-primary-background: #238636;
-    --color-button-primary-hover-background: #2EA043;
-    --color-button-primary-text: #FFFFFF;
-    --color-button-primary-border: #F0F6FC1A;
+    --color-button-primary-hover-background: #2ea043;
+    --color-button-primary-text: #ffffff;
+    --color-button-primary-border: #f0f6fc1a;
 
     /* SECONDARY BUTTON */
-    --color-button-secondary-background: #21262D;
-    --color-button-secondary-hover-background: #30363D;
-    --color-button-secondary-text: #C9D1D9;
-    --color-button-secondary-border: #F0F6FC1A;
-    --color-button-secondary-hover-border: #8B949E;
+    --color-button-secondary-background: #21262d;
+    --color-button-secondary-hover-background: #30363d;
+    --color-button-secondary-text: #c9d1d9;
+    --color-button-secondary-border: #f0f6fc1a;
+    --color-button-secondary-hover-border: #8b949e;
   }
-`
+`}`
