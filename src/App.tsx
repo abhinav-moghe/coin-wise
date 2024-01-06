@@ -1,9 +1,19 @@
-import { useState } from 'react'
-import AddTransaction from './components/transactions/newTransaction/AddTransaction'
-import { TransactionList } from './components/transactions/transactionList/TransactionList'
-import { RebootCSS } from './global-styles'
-import { BaseHeaderActions, BaseHeaderText, BaseImageStyles, Button, ButtonText, ContainerHeader, LeftContainer, TransactionContainer, ViewContainer } from './styles'
-import Overlay from './components/ui/Overlay/Overlay'
+import { useState } from "react"
+import { RebootCSS, Theme } from "./global-styles"
+import {
+  HeaderActions,
+  HeaderText,
+  Button,
+  ButtonText,
+  ContainerHeader,
+  LeftContainer,
+  TransactionContainer,
+  ViewContainer,
+} from "./styles"
+import { Image } from "./base-styles"
+import Overlay from "./components/ui/Overlay/Overlay"
+import AddTransaction from "./components/transactions/newTransaction/AddTransaction"
+import { TransactionList } from "./components/transactions/transactionList/TransactionList"
 
 const App = () => {
   const [showAddTransaction, setShowAddTransaction] = useState<boolean>(false)
@@ -11,27 +21,30 @@ const App = () => {
   return (
     <>
       <RebootCSS />
+      <Theme />
+
       <ViewContainer>
-        <LeftContainer>
-          {/* Placeholder for account and category components */}
-        </LeftContainer>
+        <LeftContainer>{/* Placeholder for account and category components */}</LeftContainer>
         <TransactionContainer>
           <ContainerHeader>
-            <BaseHeaderText>
-              Recent Transaction(s)
-            </BaseHeaderText>
-            <BaseHeaderActions>
+            <HeaderText>Recent Transaction(s)</HeaderText>
+            <HeaderActions>
               <Button onClick={() => setShowAddTransaction(true)}>
                 <ButtonText>Add</ButtonText>
-                <BaseImageStyles {...{ width: '16px', height: '16px' }} src='src/assets/icons/add.png' />
+                <Image
+                  {...{ width: "16px", height: "16px" }}
+                  src="src/assets/icons/add.png"
+                />
               </Button>
-              {
-                showAddTransaction &&
+              {showAddTransaction && (
                 <Overlay>
-                  <AddTransaction open={true} onClose={() => setShowAddTransaction(false)} />
+                  <AddTransaction
+                    open={true}
+                    onClose={() => setShowAddTransaction(false)}
+                  />
                 </Overlay>
-              }
-            </BaseHeaderActions>
+              )}
+            </HeaderActions>
           </ContainerHeader>
           <TransactionList></TransactionList>
         </TransactionContainer>

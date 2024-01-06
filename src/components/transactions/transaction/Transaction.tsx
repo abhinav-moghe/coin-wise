@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react"
+import {
+  Amount,
+  CategoryIconCircle,
+  CategoryName,
+  CategoryNameAndDate,
+  Date,
+  TransactionContainer,
+} from "./styles"
+import { Image } from "../../../base-styles"
 import { DAccounts, DCategories } from "../../../constants"
-import { Amount, CategoryIconCircle, CategoryImg, CategoryName, CategoryNameAndDate, Date, TransactionContainer } from "./styles"
 
 export const Transaction = ({ transaction }: { transaction: ITransaction }) => {
   const [category, setCategory] = useState<ICategory | undefined>(undefined)
@@ -8,14 +16,15 @@ export const Transaction = ({ transaction }: { transaction: ITransaction }) => {
   const [account, setAccount] = useState<IAccount | undefined>(undefined)
 
   useEffect(() => {
-    const foundCategory: ICategory | undefined = DCategories
-      .find((c: ICategory) => c.id === transaction?.categoryId)
-    const foundAccount: IAccount | undefined = DAccounts
-      .find((a: IAccount) => a.id === transaction?.accountId)
+    const foundCategory: ICategory | undefined = DCategories.find(
+      (c: ICategory) => c.id === transaction?.categoryId
+    )
+    const foundAccount: IAccount | undefined = DAccounts.find(
+      (a: IAccount) => a.id === transaction?.accountId
+    )
 
     setCategory(foundCategory)
     setAccount(foundAccount)
-
   }, [transaction])
 
   if (!transaction) {
@@ -23,17 +32,24 @@ export const Transaction = ({ transaction }: { transaction: ITransaction }) => {
   }
 
   return (
-    transaction &&
-    (
+    transaction && (
       <TransactionContainer>
         <CategoryIconCircle>
-          <CategoryImg src={`src/assets/images/${category?.imageURL}`} />
+          <Image
+            width="1.5rem"
+            height="1.5rem"
+            src={`src/assets/images/${category?.imageURL}`}
+          />
         </CategoryIconCircle>
         <CategoryNameAndDate>
-          <CategoryName>{category?.name} - {transaction.notes}</CategoryName>
-          <Date>{transaction.date} • From {account?.name}</Date>
+          <CategoryName>
+            {category?.name} - {transaction.notes}
+          </CategoryName>
+          <Date>
+            {transaction.date} • From {account?.name}
+          </Date>
         </CategoryNameAndDate>
-        <Amount>{transaction.type === 'withdraw' ? '-' : '+'}₹1,000</Amount>
+        <Amount>{transaction.type === "withdraw" ? "-" : "+"}₹1,000</Amount>
       </TransactionContainer>
     )
   )

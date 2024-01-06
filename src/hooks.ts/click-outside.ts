@@ -1,6 +1,10 @@
 import { MutableRefObject, useEffect } from "react"
 
-const useClickOutside = (open: boolean, ref: MutableRefObject<HTMLDivElement | null>, handler: () => void): void => {
+const useClickOutside = (
+  open: boolean,
+  ref: MutableRefObject<HTMLDivElement | null>,
+  handler: () => void
+): void => {
   useEffect(() => {
     const listener = (e: MouseEvent): void => {
       if (open && !ref?.current?.contains(e.target as HTMLDivElement)) {
