@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Content } from "../../../styles"
+import { Content } from "../../../app-styles"
 
 export const TransactionListContainer = styled(Content)`
   display: flex;

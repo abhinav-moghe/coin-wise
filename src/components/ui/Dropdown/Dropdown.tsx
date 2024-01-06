@@ -9,7 +9,7 @@ import {
   DropdownOptionLabel,
   DropdownOptionsWrapper,
   DropdownSelectedText,
-} from "./styles"
+} from "./dropdown-styles"
 import { Image } from "../../../base-styles"
 import useClickOutside from "../../../hooks.ts/click-outside"
 

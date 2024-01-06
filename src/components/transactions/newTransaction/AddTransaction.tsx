@@ -8,8 +8,8 @@ import {
   Input,
   TextArea,
   TransactionForm,
-} from "./styles"
-import { Header, HeaderText } from "../../../styles"
+} from "./add-transaction-styles"
+import { Header, HeaderText } from "../../../app-styles"
 import { Image } from "../../../base-styles"
 import { DAccounts, DCategories, DTransactionTypes } from "../../../constants"
 import Dropdown from "../../ui/Dropdown/Dropdown"

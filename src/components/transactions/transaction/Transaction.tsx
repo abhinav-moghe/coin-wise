@@ -6,7 +6,7 @@ import {
   CategoryNameAndDate,
   Date,
   TransactionContainer,
-} from "./styles"
+} from "./transaction-styles"
 import { Image } from "../../../base-styles"
 import { DAccounts, DCategories } from "../../../constants"
 

@@ -9,7 +9,7 @@ import {
   LeftContainer,
   TransactionContainer,
   ViewContainer,
-} from "./styles"
+} from "./app-styles"
 import { Image } from "./base-styles"
 import Overlay from "./components/ui/Overlay/Overlay"
 import AddTransaction from "./components/transactions/newTransaction/AddTransaction"

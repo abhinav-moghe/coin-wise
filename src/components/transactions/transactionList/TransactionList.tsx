@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { TransactionListContainer } from "./styles"
+import { TransactionListContainer } from "./transaction-list-styles"
 import { DTransactions } from "../../../constants"
 import { Transaction } from "../transaction/Transaction"
 
