@@ -102,3 +102,16 @@ export const DTransactionTypes: Array<ITransactionType> = [
     imageURL: 'icon-withdraw.png'
   },
 ]
+
+export const DTabs: Array<ITab> = [
+  {
+    id: 1,
+    name: 'Accounts',
+    isSelected: true
+  },
+  {
+    id: 2,
+    name: 'Categories',
+    isSelected: false
+  },
+]

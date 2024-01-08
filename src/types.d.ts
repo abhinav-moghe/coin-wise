@@ -26,3 +26,9 @@ type ITransactionType = {
   name: "Deposit" | "Withdraw"
   imageURL: string
 }
+
+type ITab = {
+  id: number
+  name: string
+  isSelected: boolean
+}
