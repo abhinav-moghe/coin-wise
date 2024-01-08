@@ -44,11 +44,7 @@ const App = () => {
                   </Accounts>
                 )
               } else if (ele.name === "Categories") {
-                return (
-                  <Categories>
-                    <ButtonText>Categories</ButtonText>
-                  </Categories>
-                )
+                return <Categories></Categories>
               }
             }
           })}

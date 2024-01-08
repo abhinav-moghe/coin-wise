@@ -2,6 +2,8 @@ type ICategory = {
   id: number
   name: string
   imageURL: string
+  spentAmount: number
+  limitAmount: number
 }
 
 type IAccount = {

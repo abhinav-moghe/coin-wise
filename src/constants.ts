@@ -24,21 +24,29 @@ export const DCategories: Array<ICategory> = [
     id: 1,
     name: "Food",
     imageURL: "icon-food.png",
+    spentAmount: 1000,
+    limitAmount: 2000,
   },
   {
     id: 2,
     name: "Cigarettes",
     imageURL: "icon-cigarette.png",
+    spentAmount: 1200,
+    limitAmount: 2000,
   },
   {
     id: 3,
     name: "Commute",
     imageURL: "icon-commute.png",
+    spentAmount: 1400,
+    limitAmount: 2000,
   },
   {
     id: 4,
     name: "Grocery",
     imageURL: "icon-grocery.png",
+    spentAmount: 1600,
+    limitAmount: 2000,
   },
 ]
 

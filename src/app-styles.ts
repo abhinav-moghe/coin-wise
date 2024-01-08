@@ -38,6 +38,7 @@ export const ViewContainer = styled.main`
   background-color: var(--primary-bg-color);
 `
 
+// TO-DO: Move container to base-styles
 const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -49,6 +50,8 @@ const Container = styled.div`
 
 export const LeftContainer = styled(Container)`
   width: 25%;
+  display: flex;
+  flex-direction: column;
 `
 
 export const TransactionContainer = styled(Container)`
@@ -59,12 +62,6 @@ export const TransactionContainer = styled(Container)`
 
 export const ContainerHeader = styled(Header)`
   border-bottom: 1px solid var(--color-default-border);
-`
-
-export const Content = styled.div`
-  width: 100%;
-  /* height: calc(100% - (1rem + 1.25rem + 1rem)); */
-  padding: 0 1rem;
 `
 
 export const ButtonText = styled.span`
