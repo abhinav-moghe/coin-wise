@@ -34,6 +34,29 @@ export const BaseInput = css`
   }
 `
 
+export const BaseUnorderedList = css`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+`
+
+export const BaseLink = css`
+  width: 100%;
+  height: 2.5rem;
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-radius: 0.375rem;
+  cursor: pointer;
+
+  &:hover {
+    transition: background-color 0.15s ease-out;
+  }
+`
+
 export const BaseButton = css`
   display: flex;
   flex-direction: row;

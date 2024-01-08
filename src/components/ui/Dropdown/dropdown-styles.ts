@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { BaseButton, BaseSpan } from "../../../base-styles"
+import styled, { css } from "styled-components"
+import { BaseButton, BaseLink, BaseSpan, BaseUnorderedList } from "../../../base-styles"
 
 export const DropdownButton = styled.button<{ width: string; height: string }>`
   ${BaseButton}
@@ -46,13 +46,12 @@ export const DropdownSelectedText = styled.span`
 `
 
 export const DropdownOptionsWrapper = styled.ul`
+  ${BaseUnorderedList}
   /* width of the wrapper - left/right padding  */
   width: calc(25% - (1rem + 1rem));
   margin-top: 0.5rem;
   padding: 0.5rem;
-
   position: absolute;
-
   background-color: var(--drop-down-bg-color);
   border-radius: 0.375rem;
   list-style: none;
@@ -69,17 +68,9 @@ export const DropdownOption = styled.li`
 `
 
 export const DropdownOptionContent = styled.a`
-  width: 100%;
-  height: 2.5rem;
+  ${BaseLink}
   padding: 0.375rem 0.5rem;
-
-  position: relative;
-  display: flex;
-  align-items: center;
   gap: 0.5rem;
-
-  border-radius: 0.25rem;
-  border-style: none;
 
   &:hover {
     background-color: #b1bac41f;
