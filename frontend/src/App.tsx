@@ -1,9 +1,9 @@
-import './App.css'
+import './App.css';
+import MainLayout from './layouts/main-layout/MainLayout';
 
-function App() {
+const App = () => {
   return (
-    <></>
-  )
-}
-
+    <MainLayout children />
+  );
+};
 export default App;
